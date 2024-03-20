@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Patrick Hand", cursive;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+    background-color: #DAD6D5;
+    color: #662d22; 
+}
+
+.nav-item {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* styling for logo images in nav */
+.logo-img {
+    height: 75px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.text-color-primary {
+    color: #662d22;
+}
+
+.text-color-secondary {
+    color: #226662;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* styling for each individual content block */
+.content div {
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+/*font size for game names */
+.content h3 {
+    font-size: 2em; 
+    margin-bottom: 3px; 
+    color: #662d22;
+}
+
+.content h3:last-child {
+    margin-bottom: 4rem;
+}
+
+.content img {
+    height: 450px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* hover effect */
+.content div:hover h3 {
+    opacity: 1;
+    color: #662d22;
+}
+
+.genre-selector {
+    background: #DAD6D5;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 48px;
+    padding-right: 48px;
+    cursor: pointer;
+}
+
+.genre-selector:hover {
+    background: #9a9a9a;
+}
+
+.genre-selector:nth-child(even) {
+    color: #226662;
+}
+
+.genre-selector:nth-child(odd) {
+    color: #662D22;
+}
+
+#genre-content {
+    display: flex;
+    padding-top: 24px;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+}
+
+.genre-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.genre-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#genre-selector-last {
+    background: #DAD6D5;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 48px;
+    padding-right: 48px;
+    color: #662D22;
+    cursor: pointer;
+}
+
+#genre-selector-last:hover {
+    background: #9a9a9a;
+}
+
+#genre-title {
+    font-size: 28px;
+    color: #662D22;
+}
+
+#guess-content {
+    display: flex;
+    padding-top: 96px;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #DFE6E0;
+}
+
+#guess-album-img {
+    height: 30vh;
+    width: 30vh;
+    background-color: #226662;
+    display: flex;
+    align-self: center;
+}
+
+#lyrics {
+    color:#662D22;
+    font-size: 2.5rem;
+    align-self: center;
+    margin: 12px;
+}
+
+#guess-inp {
+    width: 30vh;
+    height: 7vh;
+    font-size: 2rem;
+    align-self: center;
+    text-align: center;
+}
+
+#guess-submit-btn {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    margin: 1rem;
+    font-size: 2rem;
+    align-self: center;
+    color: #662D22;
+    background-color: #DAD6D5;
+    border: 0;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#guess-submit-btn:hover {
+    color: #226662;
+    background-color: #949494;
+}
+
+#clash-submit-btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 12px;
+    font-size: 18px;
+    align-self: center;
+    color: #662D22;
+    background-color: #DAD6D5;
+    border: 0;
+}
+
+.home-click {
+    cursor: pointer;
+}
+
+.account-click {
+    cursor: pointer;
+}
+
+.content #clash-link {
+    background-color: #DFE6E5;
+}
+
+.content #guess-link {
+    background-color: #DFE6E0;
+}
+
+.content #matching-link {
+    background-color: #E6E1E0;
+}
+
+.content #clash-link:hover {
+    background-color: #B3EAE2;
+}
+
+.content #guess-link:hover {
+    background-color: #B0E3B7;
+}
+
+.content #matching-link:hover {
+    background-color: #E2AFA5;
+}
+
+.content #clash-history-link:hover {
+    background-color: #B3EAE2;
+}
+
+.content #guess-history-link:hover {
+    background-color: #B0E3B7;
+}
+
+.content #matching-history-link:hover {
+    background-color: #E2AFA5;
+}
+
+.content #clash-history-link {
+    background-color: #DFE6E5;
+}
+
+.content #guess-history-link {
+    background-color: #DFE6E0;
+}
+
+.content #matching-history-link {
+    background-color: #E6E1E0;
+}
+
+#matching-content {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #E6E1E0;
+}
+
+#album-matching {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 65%;
+}
+
+#album-matching-stage-1-options {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 30%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.album-matching-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+}
+
+.album-matching-img-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.album-matching-img {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    border: 2px solid black;
+}
+
+.album-matching-guesses {
+    width: 50%;
+    height: 82%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.matching-title-area {
+    background: white;
+    width: 95%;
+    height: 50px;
+    border: 2px solid black;
+    align-self: center;
+}
+
+.bracket-img {
+    padding-top: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    
+
+}
+
+#clash-content {
+    display: grid;
+    height: 90%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 0;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #dfe6e6;
+}
+
+.clash-square {
+    height: 100%;
+    width: 100%;
+}
+
+.clash-left-top {
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+}
+.clash-left-bottom {
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.clash-right-top {
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+}
+.clash-right-bottom {
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.clash-connector-top {
+    border-bottom: 4px solid black;
+}
+.clash-connector-bottom {
+    border-top: 4px solid black;
+}
+
+.clash-finals-left-top {
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.clash-finals-left {
+    border-left: 4px solid black;
+}
+
+.clash-finals-right-bottom {
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.clash-finals-right {
+    border-right: 4px solid black;
+}
+
+.clash-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clash-1 {
+    position: absolute;
+    padding-top: 970px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-2 {
+    position: absolute;
+    padding-top: 700px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-3 {
+    position: absolute;
+    padding-top: 520px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-4 {
+    position: absolute;
+    padding-top: 250px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-5 {
+    position: absolute;
+    padding-top: 520px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-6 {
+    position: absolute;
+    padding-top: 250px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-7 {
+    position: absolute;
+    padding-top: 700px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-8 {
+    position: absolute;
+    padding-top: 970px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+
+
+#versus-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20em; 
+    margin-left: 45em;
+}
+.versus-img {
+    width: 30em;
+    height: auto; 
+}
+
+
+.versus {
+    font-size: 100px; 
+    font-weight: bold;
+}
+
+.versus-1,
+.versus-2 {
+    position: absolute;
+    padding-top: 1000px;
+    top: 0;
+    right: 1700px;
+    width: 100px;
+}
+
+#guess-content form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#matching-content form
+{
+    bottom: 2rem;
+    left: 50%;
+    position: absolute;
+}
+
+#matching-content form button
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 12px;
+    font-size: 24px;
+    align-self: center;
+    color: #662D22;
+    background-color: #a3a3a3;
+    border: 0;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#matching-content form button:hover {
+    color: #226662;
+    background-color: #7c7c7c;
+}
+
+#clash-history-content {
+    display: flex;
+    height: 90%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #dfe6e6;
+    justify-content: center;
+}
+#clash-history-table {
+    border-collapse: collapse;
+    width: 75%;
+    height:max-content;
+}
+#clash-history-table-header {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#clash-history-table-body {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#clash-history-table-header {
+    background-color: #f2f2f2;
+}
+
+#album-history-content {
+    display: flex;
+    height: auto;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #dfe6e6;
+    justify-content: center;
+}
+#album-history-table {
+    border-collapse: collapse;
+    width: 75%;
+    height:max-content;
+}
+#album-history-table-header {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#album-history-table-body {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#album-history-table-header {
+    background-color: #f2f2f2;
+}
+
+a:link { 
+    text-decoration: none; 
+} 
+a:visited { 
+    text-decoration: none; 
+} 
+a:hover { 
+    text-decoration: none; 
+} 
+a:active { 
+    text-decoration: none; 
+}
+
+#matching-score {
+    font-size: 2rem;
+}
