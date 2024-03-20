@@ -1,3 +1,3 @@
 # MusicMadness
 My final project for my Software Engineering and Web Development Associates Degree. Music Madness is a game website that was created in collaboration with another student at NEIT.
-Utilizes HTML/CSS/JS/PHP
+Utilizes HTML/CSS/JS/PHP. 3 API's were used. Spotify Web SDK, Spotify Playback SDK, and MusixMatch API. Of those 3 only 2 were successfully employed over the project. Spotify Web SDK, and MusixMatch API.
