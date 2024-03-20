@@ -129,7 +129,7 @@ function getIsrcIDFromTrackID($track_id, $accessToken){
 }
 
 function getLyricData($isrcID){
-    $apiKey = "e60c61560d0229b6808fdc38ff8dd69e";
+    $apiKey = ""; //REMOVED
 
     $url = 'https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?apikey=' . $apiKey . '&track_isrc=' . $isrcID;
 

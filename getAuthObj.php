@@ -1,6 +1,6 @@
 <?php
-    $client_secret = '0eb5480fe3de46979e773f693785cb54';
-    $client_id = 'fecdbc2c26e14f288ffb9233e528844e';
+    $client_secret = ''; //REMOVED
+    $client_id = ''; //REMOVED
     $redirect_uri = 'http://localhost:80/ASCapstone/index.php';
 
     function handleStateMismatch() {

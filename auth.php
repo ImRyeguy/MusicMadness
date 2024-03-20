@@ -1,5 +1,5 @@
 <?php
-    $client_id = 'fecdbc2c26e14f288ffb9233e528844e';
+    $client_id = ''; //REMOVED
     $redirect_uri = 'http://localhost:80/ASCapstone/index.php';
 
     function generateRandomString($length) {
